@@ -3,7 +3,7 @@ import { generateAzureTokensController, refreshAzureTokenController } from "../.
 
 let azureTokenRouter = express.Router();
 
-azureTokenRouter.post("/a", generateAzureTokensController)
-azureTokenRouter.post("/a/refresh", refreshAzureTokenController)
+azureTokenRouter.post("/", generateAzureTokensController)
+azureTokenRouter.post("/refresh", refreshAzureTokenController)
 
 export default azureTokenRouter;

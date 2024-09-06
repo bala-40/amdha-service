@@ -12,7 +12,7 @@ export async function generateAzureTokensController(req: Request, res: Response)
         return res.status(200).json(resp)
     } catch (e) {
         console.log(`Error ${req.method} @azureTokens : get ${JSON.stringify(e)}`);
-        return res.status(200).json({ message: `Something went wrong` });
+        return res.status(500).json({ message: `Something went wrong` });
     }
 }
 
